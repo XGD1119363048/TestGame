@@ -1,6 +1,19 @@
 This is a UE4 project related to the balance ball
 
 ----------------
+6月1日更新日志
+
+快被git搞死了，。。。。打包导致推送了不必要文件结果推不上去，搞了两天这玩意。。。。
+
+重新创建项目并推送
+
+更新了结束位置EndLocation类，当玩家碰撞上EndLocation蓝图时，切断输入并设置游戏结束
+
+增加了游戏结束时HUD，具有重新开始功能
+
+增加了死亡次数记录功能
+
+----------------
 5.30更新日志
 
 创建基于HitBoxBase的子类SaveLocation，并增加StaticMesh组件
