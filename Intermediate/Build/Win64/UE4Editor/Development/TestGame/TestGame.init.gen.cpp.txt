@@ -1,0 +1,3 @@
+D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Development\TestGame\Definitions.TestGame.h
+D:\UE4\Engine\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\UE4\Engine\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h

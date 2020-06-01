@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-TestGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\UnrealProjects\TestGame\Intermediate\Build\Win64\TestGameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Development\TestGame\TestGame.cpp.obj"
+"D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Development\TestGame\TestGameGameModeBase.cpp.obj"
+"D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Development\TestGame\TestGame.init.gen.cpp.obj"
+"D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Development\TestGame\TestGameGameModeBase.gen.cpp.obj"
+"D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Development\TestGame\Default.rc2.res"
+/OUT:"D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Development\TestGame\UE4Editor-TestGame.lib"
+/INCLUDE:IMPLEMENT_MODULE_TestGame

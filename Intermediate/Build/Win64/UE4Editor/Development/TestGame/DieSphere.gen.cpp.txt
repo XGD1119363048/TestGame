@@ -1,0 +1,7 @@
+D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Development\TestGame\Definitions.TestGame.h
+D:\UE4\Engine\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\UE4\Engine\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\UnrealProjects\TestGame\Source\TestGame/HitBox/DieSphere.h
+D:\UnrealProjects\TestGame\Source\TestGame\HitBox\HitBoxBase.h
+D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Inc\TestGame\HitBoxBase.generated.h
+D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Inc\TestGame\DieSphere.generated.h

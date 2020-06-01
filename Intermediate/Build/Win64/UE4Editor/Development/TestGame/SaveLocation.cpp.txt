@@ -1,0 +1,15 @@
+D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Development\TestGame\Definitions.TestGame.h
+D:\UnrealProjects\TestGame\Source\TestGame\HitBox\SaveLocation.h
+D:\UnrealProjects\TestGame\Source\TestGame\HitBox\HitBoxBase.h
+D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Inc\TestGame\HitBoxBase.generated.h
+D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Inc\TestGame\SaveLocation.generated.h
+D:\UnrealProjects\TestGame\Source\TestGame\HitBox\../GameMode/TestGameGameModeBase.h
+D:\UE4\Engine\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+D:\UE4\Engine\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+D:\UE4\Engine\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+D:\UE4\Engine\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Inc\TestGame\TestGameGameModeBase.generated.h
+D:\UE4\Engine\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
+D:\UE4\Engine\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+D:\UE4\Engine\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+D:\UE4\Engine\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h

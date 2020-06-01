@@ -1,0 +1,2 @@
+D:\UnrealProjects\TestGame\Intermediate\Build\Win64\UE4Editor\Development\TestGame\Definitions.TestGame.h
+D:\UnrealProjects\TestGame\Source\TestGame\TestGame.h

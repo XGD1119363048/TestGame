@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{D20498D9-E391-49AD-B19D-32EAFC29E79F}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TestGame.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TestGameEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{691B1FBC-7FF2-4C50-B2B1-82079485574C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\TestGame">
+      <UniqueIdentifier>{1566D09F-0820-476E-BE11-21A2D1D60A24}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TestGame\TestGame.Build.cs">
+      <Filter>Source\TestGame</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\TestGame\TestGame.cpp">
+      <Filter>Source\TestGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestGame\TestGame.h">
+      <Filter>Source\TestGame</Filter>
+    </ClInclude>
+    <Filter Include="Source\TestGame\GameMode">
+      <UniqueIdentifier>{11B7E03C-48C6-4909-89CE-27A9D100CD5F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TestGame\GameMode\TestGameGameModeBase.cpp">
+      <Filter>Source\TestGame\GameMode</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestGame\GameMode\TestGameGameModeBase.h">
+      <Filter>Source\TestGame\GameMode</Filter>
+    </ClInclude>
+    <Filter Include="Source\TestGame\HitBox">
+      <UniqueIdentifier>{64498B0C-F994-47CE-AEA3-7CCE6F2CE194}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TestGame\HitBox\DieSphere.cpp">
+      <Filter>Source\TestGame\HitBox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestGame\HitBox\DieSphere.h">
+      <Filter>Source\TestGame\HitBox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestGame\HitBox\EndLocation.cpp">
+      <Filter>Source\TestGame\HitBox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestGame\HitBox\EndLocation.h">
+      <Filter>Source\TestGame\HitBox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestGame\HitBox\HitBoxBase.cpp">
+      <Filter>Source\TestGame\HitBox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestGame\HitBox\HitBoxBase.h">
+      <Filter>Source\TestGame\HitBox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestGame\HitBox\SaveLocation.cpp">
+      <Filter>Source\TestGame\HitBox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestGame\HitBox\SaveLocation.h">
+      <Filter>Source\TestGame\HitBox</Filter>
+    </ClInclude>
+    <Filter Include="Source\TestGame\Player">
+      <UniqueIdentifier>{F87362EA-E83A-4B92-B953-DCF4604F17D4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\TestGame\Player\SpherePawnBase.cpp">
+      <Filter>Source\TestGame\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestGame\Player\SpherePawnBase.h">
+      <Filter>Source\TestGame\Player</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\TestGame.uproject" />
+  </ItemGroup>
+</Project>
