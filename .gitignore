@@ -339,5 +339,6 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
+#ignore modules
 Content/StarterContent/*
 Content/PolygonKnights/*
