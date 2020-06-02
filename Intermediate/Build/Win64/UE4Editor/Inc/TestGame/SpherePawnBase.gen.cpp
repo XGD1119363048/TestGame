@@ -37,18 +37,18 @@ void EmptyLinkFunctionForGeneratedCodeSpherePawnBase() {}
 	}
 	DEFINE_FUNCTION(ASpherePawnBase::execMoveRight)
 	{
-		P_GET_PROPERTY(FFloatProperty,Z_Param_val);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_AxisValue);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->MoveRight(Z_Param_val);
+		P_THIS->MoveRight(Z_Param_AxisValue);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ASpherePawnBase::execMoveForward)
 	{
-		P_GET_PROPERTY(FFloatProperty,Z_Param_val);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_AxisValue);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->MoveForward(Z_Param_val);
+		P_THIS->MoveForward(Z_Param_AxisValue);
 		P_NATIVE_END;
 	}
 	void ASpherePawnBase::StaticRegisterNativesASpherePawnBase()
@@ -66,18 +66,18 @@ void EmptyLinkFunctionForGeneratedCodeSpherePawnBase() {}
 	{
 		struct SpherePawnBase_eventMoveForward_Parms
 		{
-			float val;
+			float AxisValue;
 		};
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_val;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AxisValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ASpherePawnBase_MoveForward_Statics::NewProp_val = { "val", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SpherePawnBase_eventMoveForward_Parms, val), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ASpherePawnBase_MoveForward_Statics::NewProp_AxisValue = { "AxisValue", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SpherePawnBase_eventMoveForward_Parms, AxisValue), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASpherePawnBase_MoveForward_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpherePawnBase_MoveForward_Statics::NewProp_val,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpherePawnBase_MoveForward_Statics::NewProp_AxisValue,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASpherePawnBase_MoveForward_Statics::Function_MetaDataParams[] = {
@@ -98,18 +98,18 @@ void EmptyLinkFunctionForGeneratedCodeSpherePawnBase() {}
 	{
 		struct SpherePawnBase_eventMoveRight_Parms
 		{
-			float val;
+			float AxisValue;
 		};
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_val;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AxisValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ASpherePawnBase_MoveRight_Statics::NewProp_val = { "val", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SpherePawnBase_eventMoveRight_Parms, val), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ASpherePawnBase_MoveRight_Statics::NewProp_AxisValue = { "AxisValue", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SpherePawnBase_eventMoveRight_Parms, AxisValue), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASpherePawnBase_MoveRight_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpherePawnBase_MoveRight_Statics::NewProp_val,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpherePawnBase_MoveRight_Statics::NewProp_AxisValue,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASpherePawnBase_MoveRight_Statics::Function_MetaDataParams[] = {
@@ -182,18 +182,6 @@ void EmptyLinkFunctionForGeneratedCodeSpherePawnBase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SphererMinSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SphererMinSpeed;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SphereMaxSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SphereMaxSpeed;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SphereSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SphereSpeed;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsInput_MetaData[];
 #endif
 		static void NewProp_IsInput_SetBit(void* Obj);
@@ -219,8 +207,8 @@ void EmptyLinkFunctionForGeneratedCodeSpherePawnBase() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TestGame,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ASpherePawnBase_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ASpherePawnBase_MoveForward, "MoveForward" }, // 3903173085
-		{ &Z_Construct_UFunction_ASpherePawnBase_MoveRight, "MoveRight" }, // 636807237
+		{ &Z_Construct_UFunction_ASpherePawnBase_MoveForward, "MoveForward" }, // 2193373860
+		{ &Z_Construct_UFunction_ASpherePawnBase_MoveRight, "MoveRight" }, // 772620033
 		{ &Z_Construct_UFunction_ASpherePawnBase_SpeedDown, "SpeedDown" }, // 1400217089
 		{ &Z_Construct_UFunction_ASpherePawnBase_SpeedUp, "SpeedUp" }, // 2439040355
 	};
@@ -231,27 +219,6 @@ void EmptyLinkFunctionForGeneratedCodeSpherePawnBase() {}
 		{ "ModuleRelativePath", "Player/SpherePawnBase.h" },
 	};
 #endif
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphererMinSpeed_MetaData[] = {
-		{ "Category", "SphereSpeed" },
-		{ "ModuleRelativePath", "Player/SpherePawnBase.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphererMinSpeed = { "SphererMinSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpherePawnBase, SphererMinSpeed), METADATA_PARAMS(Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphererMinSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphererMinSpeed_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereMaxSpeed_MetaData[] = {
-		{ "Category", "SphereSpeed" },
-		{ "ModuleRelativePath", "Player/SpherePawnBase.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereMaxSpeed = { "SphereMaxSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpherePawnBase, SphereMaxSpeed), METADATA_PARAMS(Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereMaxSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereMaxSpeed_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereSpeed_MetaData[] = {
-		{ "Category", "SphereSpeed" },
-		{ "ModuleRelativePath", "Player/SpherePawnBase.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereSpeed = { "SphereSpeed", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpherePawnBase, SphereSpeed), METADATA_PARAMS(Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_IsInput_MetaData[] = {
 		{ "Category", "SpherePawnBase" },
@@ -282,15 +249,14 @@ void EmptyLinkFunctionForGeneratedCodeSpherePawnBase() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereMeshComp_MetaData[] = {
 		{ "Category", "SphereComp" },
+		{ "Comment", "//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = \"SceneComp\")\n//class USceneComponent* SceneComp;\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Player/SpherePawnBase.h" },
+		{ "ToolTip", "UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = \"SceneComp\")\nclass USceneComponent* SceneComp;" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereMeshComp = { "SphereMeshComp", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpherePawnBase, SphereMeshComp), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereMeshComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereMeshComp_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASpherePawnBase_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphererMinSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereMaxSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SphereSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_IsInput,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_CameraComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpherePawnBase_Statics::NewProp_SpringArmComp,
@@ -323,7 +289,7 @@ void EmptyLinkFunctionForGeneratedCodeSpherePawnBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASpherePawnBase, 237505532);
+	IMPLEMENT_CLASS(ASpherePawnBase, 207655883);
 	template<> TESTGAME_API UClass* StaticClass<ASpherePawnBase>()
 	{
 		return ASpherePawnBase::StaticClass();

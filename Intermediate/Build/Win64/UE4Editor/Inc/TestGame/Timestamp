@@ -1,6 +1,7 @@
 D:\UnrealProjects\TestGame\Source\TestGame\GameMode\TestGameGameModeBase.h
-D:\UnrealProjects\TestGame\Source\TestGame\HitBox\HitBoxBase.h
-D:\UnrealProjects\TestGame\Source\TestGame\HitBox\SaveLocation.h
-D:\UnrealProjects\TestGame\Source\TestGame\Player\SpherePawnBase.h
-D:\UnrealProjects\TestGame\Source\TestGame\HitBox\DieSphere.h
 D:\UnrealProjects\TestGame\Source\TestGame\HitBox\EndLocation.h
+D:\UnrealProjects\TestGame\Source\TestGame\HitBox\DieSphere.h
+D:\UnrealProjects\TestGame\Source\TestGame\HitBox\HitBoxBase.h
+D:\UnrealProjects\TestGame\Source\TestGame\Player\SpherePawnBase.h
+D:\UnrealProjects\TestGame\Source\TestGame\HitBox\SaveLocation.h
+D:\UnrealProjects\TestGame\Source\TestGame\HitBox\GateDoor.h

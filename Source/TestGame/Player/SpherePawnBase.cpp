@@ -3,6 +3,7 @@
 
 #include "SpherePawnBase.h"
 #include "Components/StaticMeshComponent.h"
+#include "Components/SceneComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Engine.h"
@@ -18,7 +19,11 @@ ASpherePawnBase::ASpherePawnBase()
 	SphereMaxSpeed = 500.f;
 	SphererMinSpeed = SphereSpeed;
 
+	//SceneComp = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComp"));
+	//RootComponent = SceneComp;
+
 	SphereMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SphereMeshComp"));
+	//SphereMeshComp->SetupAttachment(SceneComp);
 	SphereMeshComp->SetSimulatePhysics(true);
 
 	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComp"));
@@ -33,6 +38,8 @@ ASpherePawnBase::ASpherePawnBase()
 void ASpherePawnBase::BeginPlay()
 {
 	Super::BeginPlay();
+
+	PlayerStartLocation = this->GetActorLocation();
 	
 }
 
@@ -41,10 +48,34 @@ void ASpherePawnBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (IsInput && AngularVector != FVector(0, 0, 0))
+	if (IsInput && !AngularVector.IsZero())
 	{
-		SphereMeshComp->SetPhysicsAngularVelocity(AngularVector);
+		FVector NewVector = FVector(0, 0, 0);
+		NewVector += AngularVector.X * SpringArmComp->GetForwardVector() * SphereSpeed;
+		NewVector += AngularVector.Y * SpringArmComp->GetRightVector() * SphereSpeed;
+		SphereMeshComp->SetPhysicsAngularVelocity(NewVector);
 		//SphereMeshComp->SetPhysicsAngularVelocityInDegrees(AngularVector);
+	}
+
+	//Set Camera Rotation LR
+	{
+		FRotator LRRotation = SpringArmComp->GetComponentRotation();
+		LRRotation.Yaw += CameraInput.X;
+		//SpringArmComp->SetWorldRotation(LRRotation);
+		SpringArmComp->SetRelativeRotation(LRRotation);
+	}
+	//Set Camera Rotation UD
+	{
+		FRotator UDRotation = SpringArmComp->GetComponentRotation();
+		UDRotation.Pitch = FMath::Clamp(UDRotation.Pitch + CameraInput.Y, -80.0f, -15.0f);
+		//SpringArmComp->SetWorldRotation(UDRotation);
+		SpringArmComp->SetRelativeRotation(UDRotation);
+	}
+
+	//SpringArm Follow Sphere
+	{
+		FVector NewLocation = SphereMeshComp->GetComponentLocation();
+		SpringArmComp->SetWorldLocation(NewLocation);
 	}
 }
 
@@ -56,24 +87,27 @@ void ASpherePawnBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 	PlayerInputComponent->BindAxis("MoveForward", this, &ASpherePawnBase::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ASpherePawnBase::MoveRight);
 
+	PlayerInputComponent->BindAxis("CameraYaw", this, &ASpherePawnBase::CameraYaw);
+	PlayerInputComponent->BindAxis("CameraPitch", this, &ASpherePawnBase::CameraPitch);
+
 	PlayerInputComponent->BindAction("SpeedChange", IE_Pressed, this, &ASpherePawnBase::SpeedUp);
 	PlayerInputComponent->BindAction("SpeedChange", IE_Released, this, &ASpherePawnBase::SpeedDown);
 
 }
 
-void ASpherePawnBase::MoveForward(float val)
+void ASpherePawnBase::MoveForward(float AxisValue)
 {
 	if (IsInput)
 	{
-		AngularVector.Y = SphereSpeed * val;
+		AngularVector.Y = FMath::Clamp<float>(AxisValue, -1.0f, 1.0f);
 	}
 }
 
-void ASpherePawnBase::MoveRight(float val)
+void ASpherePawnBase::MoveRight(float AxisValue)
 {
 	if (IsInput)
 	{
-		AngularVector.X = -SphereSpeed * val;
+		AngularVector.X = -FMath::Clamp<float>(AxisValue, -1.0f, 1.0f);
 	}
 }
 
@@ -85,6 +119,16 @@ void ASpherePawnBase::SpeedUp()
 void ASpherePawnBase::SpeedDown()
 {
 	SphereSpeed = SphererMinSpeed;
+}
+
+void ASpherePawnBase::CameraYaw(float AxisValue)
+{
+	CameraInput.Y = AxisValue;
+}
+
+void ASpherePawnBase::CameraPitch(float AxisValue)
+{
+	CameraInput.X = AxisValue;
 }
 
 void ASpherePawnBase::ResetSpeed()

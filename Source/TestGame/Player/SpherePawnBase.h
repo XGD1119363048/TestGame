@@ -15,6 +15,9 @@ public:
 	// Sets default values for this pawn's properties
 	ASpherePawnBase();
 
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SceneComp")
+	//class USceneComponent* SceneComp;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SphereComp")
 	class UStaticMeshComponent* SphereMeshComp;
 
@@ -24,21 +27,19 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
 	class UCameraComponent* CameraComp;
 
+	FVector PlayerStartLocation;
+
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool IsInput;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SphereSpeed")
+	FVector AngularVector;
 	float SphereSpeed;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SphereSpeed")
 	float SphereMaxSpeed;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SphereSpeed")
 	float SphererMinSpeed;
 
-	FVector AngularVector;
+	FVector CameraInput;
 
 protected:
 	// Called when the game starts or when spawned
@@ -52,16 +53,19 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UFUNCTION(BlueprintCallable)
-	void MoveForward(float val);
+	void MoveForward(float AxisValue);
 
 	UFUNCTION(BlueprintCallable)
-	void MoveRight(float val);
+	void MoveRight(float AxisValue);
 
 	UFUNCTION(BlueprintCallable)
 	void SpeedUp();
 
 	UFUNCTION(BlueprintCallable)
 	void SpeedDown();
+
+	void CameraYaw(float AxisValue);
+	void CameraPitch(float AxisValue);
 
 	void ResetSpeed();
 

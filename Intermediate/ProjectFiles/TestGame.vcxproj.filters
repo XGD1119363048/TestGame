@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <None Include="..\..\TestGame.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{D20498D9-E391-49AD-B19D-32EAFC29E79F}</UniqueIdentifier>
+      <UniqueIdentifier>{B7A06400-9622-463E-AD8B-FAB18BF77B67}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TestGame.Target.cs">
       <Filter>Source</Filter>
@@ -10,8 +11,11 @@
     <None Include="..\..\Source\TestGameEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\README.md" />
     <Filter Include="Config">
-      <UniqueIdentifier>{691B1FBC-7FF2-4C50-B2B1-82079485574C}</UniqueIdentifier>
+      <UniqueIdentifier>{8A417B50-554D-4F3B-AFE1-F6968FE95151}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -22,8 +26,11 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\TestGame">
-      <UniqueIdentifier>{1566D09F-0820-476E-BE11-21A2D1D60A24}</UniqueIdentifier>
+      <UniqueIdentifier>{DA43BE48-7853-4087-814D-5213B3951031}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TestGame\TestGame.Build.cs">
       <Filter>Source\TestGame</Filter>
@@ -35,7 +42,7 @@
       <Filter>Source\TestGame</Filter>
     </ClInclude>
     <Filter Include="Source\TestGame\GameMode">
-      <UniqueIdentifier>{11B7E03C-48C6-4909-89CE-27A9D100CD5F}</UniqueIdentifier>
+      <UniqueIdentifier>{7AFB6A88-9126-4B4B-A5A7-7B94F211B0FB}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TestGame\GameMode\TestGameGameModeBase.cpp">
       <Filter>Source\TestGame\GameMode</Filter>
@@ -44,7 +51,7 @@
       <Filter>Source\TestGame\GameMode</Filter>
     </ClInclude>
     <Filter Include="Source\TestGame\HitBox">
-      <UniqueIdentifier>{64498B0C-F994-47CE-AEA3-7CCE6F2CE194}</UniqueIdentifier>
+      <UniqueIdentifier>{F93A3F62-C8E3-4700-94AC-A978E72B97A0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TestGame\HitBox\DieSphere.cpp">
       <Filter>Source\TestGame\HitBox</Filter>
@@ -56,6 +63,12 @@
       <Filter>Source\TestGame\HitBox</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TestGame\HitBox\EndLocation.h">
+      <Filter>Source\TestGame\HitBox</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TestGame\HitBox\GateDoor.cpp">
+      <Filter>Source\TestGame\HitBox</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TestGame\HitBox\GateDoor.h">
       <Filter>Source\TestGame\HitBox</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TestGame\HitBox\HitBoxBase.cpp">
@@ -71,7 +84,7 @@
       <Filter>Source\TestGame\HitBox</Filter>
     </ClInclude>
     <Filter Include="Source\TestGame\Player">
-      <UniqueIdentifier>{F87362EA-E83A-4B92-B953-DCF4604F17D4}</UniqueIdentifier>
+      <UniqueIdentifier>{5E88ED38-660E-47B4-868F-9F91CF9815EA}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TestGame\Player\SpherePawnBase.cpp">
       <Filter>Source\TestGame\Player</Filter>
@@ -79,8 +92,5 @@
     <ClInclude Include="..\..\Source\TestGame\Player\SpherePawnBase.h">
       <Filter>Source\TestGame\Player</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\TestGame.uproject" />
   </ItemGroup>
 </Project>
